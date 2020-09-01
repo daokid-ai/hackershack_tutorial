@@ -28,9 +28,10 @@ SECRET_KEY = "4p6zbhgj))^0948as9rbtn6kzvwafmefd3)pvj-y18f+*kc)yc"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-DJANGO_LOCALHOST = 'localhost'
-DJANGO_STAGING = 'ec2-13-52-75-224.us-west-1.compute.amazonaws.com'
-#DJANGO_STAGING = os.environ.get('DJANGO_STAGING', default="")
+#DJANGO_LOCALHOST = 'localhost'
+#DJANGO_STAGING = 'ec2-13-52-75-224.us-west-1.compute.amazonaws.com'
+DJANGO_LOCALHOST = os.environ.get('DJANGO_LOCALHOST', default="")
+DJANGO_STAGING = os.environ.get('DJANGO_STAGING', default="")
 
 ALLOWED_HOSTS = [
     DJANGO_LOCALHOST,

@@ -10,3 +10,6 @@ hackershack_website/apps/public/__pycache__
 
 #database files
 hackershack_website/db.sqlite3
+
+#ignore folder
+ignore/
