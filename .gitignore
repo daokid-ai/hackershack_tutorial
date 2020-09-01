@@ -3,6 +3,10 @@
 
 #python files
 hackershack_website/__pycache__
+hackershack_website/apps/__pycache__
+hackershack_website/apps/accounts/__pycache__
+hackershack_website/apps/public/__pycache__
+
 
 #database files
 hackershack_website/db.sqlite3
