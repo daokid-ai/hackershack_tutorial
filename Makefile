@@ -18,3 +18,6 @@ compose-makemigrations:
 
 compose-dbmigrate:
 	docker-compose run --rm $(options) website python manage.py migrate
+
+compose-createsu:
+	docker-compose run website python manage.py createsuperuser

@@ -18,25 +18,22 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # PROJECT_DIR = Path(BASE_DIR / 'hackershack_website').resolve(strict=True).parent.parent
 PROJECT_DIR = os.path.join(BASE_DIR, "hackershack_website")
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "4p6zbhgj))^0948as9rbtn6kzvwafmefd3)pvj-y18f+*kc)yc"
+SECRET_KEY = os.environ.get('SECRET_KEY', default="")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#DJANGO_LOCALHOST = 'localhost'
-#DJANGO_STAGING = 'ec2-13-52-75-224.us-west-1.compute.amazonaws.com'
 DJANGO_LOCALHOST = os.environ.get('DJANGO_LOCALHOST', default="")
 DJANGO_STAGING = os.environ.get('DJANGO_STAGING', default="")
 
 ALLOWED_HOSTS = [
     DJANGO_LOCALHOST,
     DJANGO_STAGING,
-    ]
+]
 
 
 # Application definition
@@ -145,6 +142,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
 
 LOGIN_URL = "accounts:login"
 LOGIN_REDIRECT_URL = "public:index"
