@@ -1,5 +1,5 @@
 build:
-	docker build --force-rm $(options) -t hackershack-website-tutorial:latest .
+	docker build --force-rm $(options) -t hsw-tut:dev .
 
 build-prod:
 	$(MAKE) build options="--target production"

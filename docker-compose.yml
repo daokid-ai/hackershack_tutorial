@@ -14,7 +14,7 @@ services:
             - db-data:/var/lib/postgressql/data
 
     website:
-        image: hackershack-website-tutorial:latest
+        image: hsw-tut:dev
         command: python manage.py runserver 0.0.0.0:8000
         volumes: *service-volumes
         env_file: 
@@ -26,7 +26,7 @@ services:
             - "8000:8000"
 
     db_migrate:
-        image: hackershack-website-tutorial:latest
+        image: hsw-tut:dev
         command: python manage.py migrate
         volumes: *service-volumes
         env_file: 

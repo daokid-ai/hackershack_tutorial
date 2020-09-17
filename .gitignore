@@ -13,3 +13,6 @@ hackershack_website/db.sqlite3
 
 #ignore folder
 ignore/
+
+# config folder
+config/
